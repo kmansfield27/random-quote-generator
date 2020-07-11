@@ -78,6 +78,17 @@ const printQuote = function() {
     html += `<span class="tag">${tag}</span>`  
   }
 
+  // randomColor line found at: 
+  // https://css-tricks.com/snippets/javascript/random-hex-color/
+  const changeBackground = function() {
+    const body = document.getElementsByTagName('body')[0];
+    const randomColor = Math.floor(Math.random()*16777215).toString(16);
+    console.log(randomColor);
+    body.style.backgroundColor = `#${randomColor}`;
+  }
+
+  changeBackground();
+
   return document.getElementById('quote-box').innerHTML = html;
 }
 
