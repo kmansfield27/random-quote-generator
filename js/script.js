@@ -76,7 +76,7 @@ const printQuote = function() {
   html += `</p>`;
 
   // Loop over the tag property and add each tag to the html string
-  for (i = 0; i < randomQuote.tag.length; i++ ) {
+  for (let i = 0; i < randomQuote.tag.length; i++ ) {
     tag = randomQuote.tag[i];
     html += `<span class="tag">${tag}</span>`  
   }
